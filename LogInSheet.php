@@ -4,10 +4,11 @@
 	//store location data from previous page if found
 	if(isset($_REQUEST['location']))
 		$_SESSION['location'] = $_REQUEST['location'];
-			
+	
 	//redirect if page is accessed directly
 		if(!isset($_SESSION['location']))
 			header("Location : PickLoginSite.php");
+
 
 	//get the location name from the database
 	
@@ -140,10 +141,6 @@
 				<p> Your current location is: <span class="label label-info">
 					<?php	
 						$dalocation = $_SESSION['location'];
-						if($dalocation == '0')
-							header("Location : PickLoginSite.php");
-
-
 						$query="SELECT * FROM $tbl_name where code='$dalocation'";
 						$result=$mysqli->query($query) or die($mysqli->error.__LINE__);
 						echo $result->fetch_object()->name;
@@ -197,7 +194,7 @@
       <hr>
 
       <div class="footer">
-        <p>&copy; MUST Ministries 2020</p>
+        <p>&copy; MUST Ministries 2015</p>
       </div>
 
     </div> <!-- /container -->

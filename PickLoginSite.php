@@ -2,11 +2,8 @@
 	session_start();
 
 	//clear message from login page, if neccissary
-	
 	if(isset($_SESSION['msgtype']))
-		{
-			unset($_SESSION['msgtype']);
-		}
+		unset($_SESSION['msgtype']);
 	
 	//get the locations from the database
 	
@@ -165,7 +162,7 @@
       <hr>
 
       <div class="footer">
-        <p>&copy; MUST Ministries 2020</p>
+        <p>&copy; MUST Ministries 2015</p>
       </div>
 
     </div> <!-- /container -->
